@@ -27,7 +27,6 @@ const CartProduct = ({ item }) => {
 
   const currencies = { $: 0, "£": 1, A$: 2, "¥": 3, "₽": 4 };
   const { curr } = useSelector((state) => state.currency);
-  // const { attributes } = useSelector((state) => state.attributes);
   const attributes = JSON.parse(localStorage.getItem("attributes"));
 
   return (
@@ -42,7 +41,7 @@ const CartProduct = ({ item }) => {
           <div>
             <strong>{item.name.slice(0, 10)}</strong>
             <div className="single-product-attributes">
-              {attributes.map(
+              {attributes?.map(
                 (attribute, i) =>
                   item.name === attribute.index && (
                     <div key={i} className="product-attributes">

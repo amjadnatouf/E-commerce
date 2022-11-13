@@ -38,7 +38,6 @@ const ProductDetails = () => {
   };
 
   const handleAddToCart = () => {
-    console.log(attributes);
     const check = product.attributes.map((element) =>
       attributes.some(
         (e) =>
